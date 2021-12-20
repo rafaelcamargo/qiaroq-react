@@ -22,8 +22,8 @@
   "images": {
     "dist": {
       "filename": {
-        "prod": "assets/images/[name]-[hash].[ext]",
-        "dev": "assets/[name].[ext]"
+        "prod": "assets/images/[name]-[hash][ext]",
+        "dev": "assets/[name][ext]"
       }
     }
   },

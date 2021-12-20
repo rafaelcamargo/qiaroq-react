@@ -20,7 +20,7 @@ module.exports = {
     '<rootDir>/jest.setup.js'
   ],
   transform: {
-    '\\.(jpg|png)$': `<rootDir>/${project.source.root}/base/mocks/image-file.js`,
+    '\\.(jpg|png|svg)$': `<rootDir>/${project.source.root}/base/mocks/image-file.js`,
     '^.+\\.js$': 'babel-jest'
   }
 };

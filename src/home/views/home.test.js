@@ -1,0 +1,10 @@
+import React from 'react';
+import { render } from '@testing-library/react';
+import { HomeView } from './home';
+
+describe('Home View', () => {
+  it('should contain a home cover', () => {
+    const { getByAltText } = render(<HomeView />);
+    expect(getByAltText('laboratory machine')).toBeInTheDocument();
+  })
+})

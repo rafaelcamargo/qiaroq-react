@@ -19,10 +19,19 @@
       }
     }
   },
+  "images": {
+    "dist": {
+      "filename": {
+        "prod": "assets/images/[name]-[hash].[ext]",
+        "dev": "assets/[name].[ext]"
+      }
+    }
+  },
   "tests": {
     "source": {
       "files": [
-        "src/**/*.js"
+        "src/**/*.js",
+        "!src/**/mocks/**/*.js"
       ]
     }
   },

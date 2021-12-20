@@ -1,0 +1,34 @@
+{
+  "source": {
+    "root": "src/"
+  },
+  "index": {
+    "source": {
+      "file": "src/index.html"
+    }
+  },
+  "scripts": {
+    "source": {
+      "index": "src/index.js"
+    },
+    "dist": {
+      "root": "dist/",
+      "filename": {
+        "prod": "assets/[name]-[hash].js",
+        "dev": "assets/[name].js"
+      }
+    }
+  },
+  "tests": {
+    "source": {
+      "files": [
+        "src/**/*.js"
+      ]
+    }
+  },
+  "environments": {
+    "source": {
+      "root": "environments"
+    }
+  }
+}

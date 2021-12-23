@@ -1,43 +1,38 @@
 {
   "source": {
-    "root": "src/"
-  },
-  "index": {
-    "source": {
+    "root": "src",
+    "index": {
       "file": "src/index.html"
-    }
-  },
-  "scripts": {
-    "source": {
+    },
+    "scripts": {
       "index": "src/index.js"
     },
-    "dist": {
-      "root": "dist/",
-      "filename": {
-        "prod": "assets/[name]-[hash].js",
-        "dev": "assets/[name].js"
-      }
-    }
-  },
-  "images": {
-    "dist": {
-      "filename": {
-        "prod": "assets/images/[name]-[hash][ext]",
-        "dev": "assets/[name][ext]"
-      }
-    }
-  },
-  "tests": {
-    "source": {
-      "files": [
-        "src/**/*.js",
-        "!src/**/mocks/**/*.js"
-      ]
-    }
-  },
-  "environments": {
-    "source": {
+    "tests": {
+      "files": ["src/**/*.js", "!src/**/mocks/**/*.js"]
+    },
+    "environments": {
       "root": "environments"
+    }
+  },
+  "dist": {
+    "root": "dist",
+    "scripts": {
+      "filename": {
+        "production": "assets/[name]-[hash].js",
+        "development": "assets/[name].js"
+      }
+    },
+    "styles": {
+      "filename": {
+        "production": "assets/[name]-[hash].css",
+        "development": "assets/[name].css"
+      }
+    },
+    "images": {
+      "filename": {
+        "production": "assets/images/[name]-[hash][ext]",
+        "development": "assets/images/[name][ext]"
+      }
     }
   }
 }

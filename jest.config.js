@@ -1,7 +1,7 @@
 const project = require('./project.json');
 
 module.exports = {
-  collectCoverageFrom: project.tests.source.files,
+  collectCoverageFrom: project.source.tests.files,
   coverageReporters: ['html', 'text-summary'],
   coverageThreshold: {
     global: {
@@ -12,15 +12,16 @@ module.exports = {
     }
   },
   moduleNameMapper: {
-    '@src\/(.*)$': `<rootDir>/${project.source.root}$1`,
-    '@environment$': `<rootDir>/${project.environments.source.root}/development.js`
+    '@src\/(.*)$': `<rootDir>/${project.source.root}/$1`,
+    '@environment$': `<rootDir>/${project.source.environments.root}/development.js`
   },
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: [
     '<rootDir>/jest.setup.js'
   ],
   transform: {
-    '\\.(jpg|png|svg)$': `<rootDir>/${project.source.root}/base/mocks/image-file.js`,
-    '^.+\\.js$': 'babel-jest'
+    '^.+\\.js$': 'babel-jest',
+    '^.+\\.styl$': `<rootDir>/${project.source.root}/base/mocks/raw-file.js`,
+    '\\.(jpg|jpeg|png|svg)$': `<rootDir>/${project.source.root}/base/mocks/image-file.js`
   }
 };

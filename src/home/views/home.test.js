@@ -4,7 +4,7 @@ import { HomeView } from './home';
 
 describe('Home View', () => {
   it('should contain a home cover', () => {
-    const { getByAltText } = render(<HomeView />);
-    expect(getByAltText('laboratory machine')).toBeInTheDocument();
+    const { getByText } = render(<HomeView />);
+    expect(getByText('Qiaroq')).toBeInTheDocument();
   })
 })

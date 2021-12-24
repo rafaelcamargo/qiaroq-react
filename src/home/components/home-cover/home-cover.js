@@ -1,12 +1,13 @@
+import './home-cover.styl';
 import React from 'react';
-import { Icon } from '@src/base/components/icon/icon';
-import labMachineImageUrl from '@src/home/images/lab-machine.png';
+import { Credits } from '@src/base/components/credits/credits';
+import { Logo } from '@src/base/components/logo/logo';
 
-export const HomeCover = () => {
-  return (
-    <>
-      <Icon name="flask" />
-      <img alt="laboratory machine" src={labMachineImageUrl} />
-    </>
-  );
-};
+export const HomeCover = () => (
+  <div className="home-cover">
+    <Logo />
+    <div className="home-cover-footer">
+      <Credits />
+    </div>
+  </div>
+);

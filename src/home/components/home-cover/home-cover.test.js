@@ -3,10 +3,17 @@ import { render } from '@testing-library/react';
 import { HomeCover } from './home-cover';
 
 describe('Home Cover', () => {
-  it('should contain an image', () => {
-    const { getByAltText } = render(<HomeCover />);
-    const image = getByAltText('laboratory machine');
-    expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', 'lab-machine.png');
+  function mount(){
+    return render(<HomeCover />);
+  }
+
+  it('should contain a logo', () => {
+    const { getByText } = mount();
+    expect(getByText('Qiaroq')).toBeInTheDocument();
+  })
+
+  it('should contain credits', () => {
+    const { getByText } = mount();
+    expect(getByText('Maintained by')).toBeInTheDocument();
   })
 })

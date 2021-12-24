@@ -8,4 +8,4 @@ export const Credits = () => (
     <Avatar name="Rafael Camargo" imageUrl={avatarImageUrl} />
     Maintained by <a href="https://rafaelcamargo.com" target="_blank" rel="noopener noreferrer">Rafael Camargo</a>
   </div>
-)
+);

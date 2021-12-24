@@ -6,5 +6,5 @@ describe('Home View', () => {
   it('should contain a home cover', () => {
     const { getByText } = render(<HomeView />);
     expect(getByText('Qiaroq')).toBeInTheDocument();
-  })
-})
+  });
+});

@@ -42,12 +42,12 @@ describe('Icon', () => {
     const { getByRole } = mount({ name });
     const iconElement = getByRole('presentation');
     expect(iconElement).toHaveAttribute('data-icon', name);
-  })
+  });
 
   it('should not contain custom attribute for icon name if it has not been found', () => {
     const name = 'tree';
     const { getByRole } = mount({ name });
     const iconElement = getByRole('presentation');
     expect(iconElement).not.toHaveAttribute('data-icon');
-  })
+  });
 });

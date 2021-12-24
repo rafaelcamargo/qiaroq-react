@@ -10,10 +10,10 @@ describe('Home Cover', () => {
   it('should contain a logo', () => {
     const { getByText } = mount();
     expect(getByText('Qiaroq')).toBeInTheDocument();
-  })
+  });
 
   it('should contain credits', () => {
     const { getByText } = mount();
     expect(getByText('Maintained by')).toBeInTheDocument();
-  })
-})
+  });
+});

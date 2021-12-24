@@ -1,6 +1,6 @@
 import './icon.styl';
 import React from 'react';
-import iconUrls from '@src/base/icons'
+import iconUrls from '@src/base/icons';
 
 export const Icon = ({ name }) => (
   <span
@@ -10,7 +10,7 @@ export const Icon = ({ name }) => (
     role="presentation"
   >
   </span>
-)
+);
 
 function buildClassName(name){
   const baseClass = 'icon';

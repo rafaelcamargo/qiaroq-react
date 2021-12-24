@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "webpack",
+    "format": "eslint ./src/**/*.js",
     "start": "webpack-dev-server",
     "test": "jest"
   },
@@ -25,6 +26,8 @@
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.3.1",
+    "eslint": "^8.5.0",
+    "eslint-plugin-react": "^7.28.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.5",
     "mini-css-extract-plugin": "^2.4.5",

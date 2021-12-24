@@ -14,7 +14,7 @@ describe('Credits', () => {
 
   it('should contain Rafael Camargo avatar', () => {
     const { getByAltText } = mount();
-    const avatar = getByAltText('Rafael Camargo\'s avatar')
+    const avatar = getByAltText('Rafael Camargo\'s avatar');
     expect(avatar).toHaveAttribute('src', 'avatar-rafael-camargo.jpeg');
   });
 

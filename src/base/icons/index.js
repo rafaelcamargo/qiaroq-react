@@ -1,5 +1,7 @@
-import flaskIconUrl from '@src/base/icons/flask.svg';
+import cobogoCircleUrl from '@src/base/icons/cobogo-circle.svg';
+import cobogoSquareUrl from '@src/base/icons/cobogo-square.svg';
 
 export default {
-  flask: flaskIconUrl
+  'cobogo-circle': cobogoCircleUrl,
+  'cobogo-square': cobogoSquareUrl
 };

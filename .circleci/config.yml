@@ -33,7 +33,11 @@ jobs:
             - "webpack.*.js"
             - ".babelrc"
             - ".eslintrc"
+            - ".firebaserc"
+            - "firebase.json"
             - "node_modules"
+            - ".git/*"
+            - ".circleci/*"
             - "src/*"
 
   format:
@@ -55,6 +59,10 @@ jobs:
       - run:
           name: Build
           command: NODE_ENV=production npm run build
+      - persist_to_workspace:
+          root: "."
+          paths:
+            - "dist/*"
 
   test:
     <<: *defaults
@@ -65,6 +73,16 @@ jobs:
       - run:
           name: Test
           command: npm run test -- --maxWorkers=2 --coverage --coverageReporters=lcov
+
+  deploy:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: ~/qiaroq-react
+      - run:
+          name: Deploy
+          command: ./.circleci/deploy.sh
 
 workflows:
   version: 2
@@ -81,3 +99,8 @@ workflows:
       - test:
           requires:
             - install
+      - deploy:
+          requires:
+            - format
+            - build
+            - test

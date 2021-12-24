@@ -7,6 +7,6 @@ describe('Index', () => {
   })
 
   it('should render a homepage', () => {
-    expect(screen.getByText('Hello!')).toBeInTheDocument();
+    expect(screen.getByText('Qiaroq')).toBeInTheDocument();
   });
 });

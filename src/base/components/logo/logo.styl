@@ -1,0 +1,60 @@
+@import '@src/vars'
+@import '@src/mixins'
+
+.logo
+  position relative
+  text-align right
+  .icon
+    position absolute
+    top 0
+    right 0
+    width 24px
+    height 24px
+    background-color $color-lightest
+  .icon-cobogo-square
+    right -1
+  .icon-cobogo-circle
+    right 24px
+
+.logo-title,
+.logo-subtitle
+  font-weight bold
+
+.logo-title
+  font-size 80px
+  letter-spacing -3px
+
+.logo-subtitle
+  position absolute
+  bottom -1px
+  right 20px
+  font-size $font-size-xxxs
+  font-weight 400
+
++breakpoint('sm')
+  .logo
+    .icon
+      width 48px
+      height 48px
+    .icon-cobogo-square
+      right -5px
+    .icon-cobogo-circle
+      right 42px
+
+  .logo-title
+    font-size 140px
+    letter-spacing -7px
+
+  .logo-subtitle
+    bottom 0
+    right 30px
+    font-size $font-size-sm
+
++breakpoint('lg')
+  .logo-title
+    font-size 210px
+    letter-spacing -10px
+
+  .logo-subtitle
+    bottom 3px
+    right 50px

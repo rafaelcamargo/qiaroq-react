@@ -4,6 +4,9 @@
     "index": {
       "file": "src/index.html"
     },
+    "favicon": {
+      "file": "src/base/images/favicon.png"
+    },
     "scripts": {
       "index": "src/index.js"
     },

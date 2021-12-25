@@ -35,6 +35,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: project.source.index.file,
+      favicon: project.source.favicon.file,
       minify: {collapseWhitespace: true}
     }),
     new MiniCssExtractPlugin({

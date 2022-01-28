@@ -7,6 +7,7 @@ describe('Index', () => {
   });
 
   it('should render a homepage', () => {
-    expect(screen.getByText('Qiaroq')).toBeInTheDocument();
+    expect(screen.getByText('React Hook Form')).toBeInTheDocument();
+    expect(screen.getByText('Taslonic Form')).toBeInTheDocument();
   });
 });

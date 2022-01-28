@@ -7,13 +7,13 @@ describe('Home Cover', () => {
     return render(<HomeCover />);
   }
 
-  it('should contain a logo', () => {
+  it('should contain a React Hook Form', async () => {
     const { getByText } = mount();
-    expect(getByText('Qiaroq')).toBeInTheDocument();
+    expect(getByText('React Hook Form')).toBeInTheDocument();
   });
 
-  it('should contain credits', () => {
+  it('should contain a Taslonic Form', async () => {
     const { getByText } = mount();
-    expect(getByText('Maintained by')).toBeInTheDocument();
+    expect(getByText('Taslonic Form')).toBeInTheDocument();
   });
 });

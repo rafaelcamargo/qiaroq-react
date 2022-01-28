@@ -1,41 +1,9 @@
-@import '@src/vars'
-@import '@src/mixins'
-
 .home-cover
-  position relative
-  padding 75px 30px 0
-  height 100vh
-  background-color #333
-  background-image url('@src/home/images/oscar-niemeyer-museum.jpg')
-  background-position center
-  background-size cover
-  background-blend-mode multiply
-  box-sizing border-box
-  &:before
-    position absolute
-    content ''
-    top 30%
-    bottom 0
-    left 0
-    right 0
-    background linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)
-    z-index $layer-base
-  .credits
-    position relative
-    z-index $layer-lowest
-    opacity .5
+  margin 50px auto
+  max-width 400px
+  button[type="submit"]
+    margin-top 10px
 
-.home-cover-footer
-  position absolute
-  left 0
-  bottom 0
-  padding 30px 0
-  width 100%
-
-+breakpoint('sm')
-  .home-cover
-    padding 110px 75px 0
-
-+breakpoint('lg')
-  .home-cover
-    padding 150px 100px 0
+.home-cover-form-container
+  & + .home-cover-form-container
+    margin-top 50px

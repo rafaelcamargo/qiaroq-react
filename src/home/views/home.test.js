@@ -5,6 +5,7 @@ import { HomeView } from './home';
 describe('Home View', () => {
   it('should contain a home cover', () => {
     const { getByText } = render(<HomeView />);
-    expect(getByText('Qiaroq')).toBeInTheDocument();
+    expect(getByText('React Hook Form')).toBeInTheDocument();
+    expect(getByText('Taslonic Form')).toBeInTheDocument();
   });
 });

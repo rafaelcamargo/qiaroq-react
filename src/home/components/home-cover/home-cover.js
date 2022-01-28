@@ -1,13 +1,17 @@
 import './home-cover.styl';
 import React from 'react';
-import { Credits } from '@src/base/components/credits/credits';
-import { Logo } from '@src/base/components/logo/logo';
+import { HomeReactHookForm } from '@src/home/components/home-react-hook-form/home-react-hook-form';
+import { HomeTaslonicForm } from '@src/home/components/home-taslonic-form/home-taslonic-form';
 
-export const HomeCover = () => (
-  <div className="home-cover">
-    <Logo />
-    <div className="home-cover-footer">
-      <Credits />
+export const HomeCover = () => {
+  return (
+    <div className="home-cover">
+      <div className="home-cover-form-container">
+        <HomeReactHookForm />
+      </div>
+      <div className="home-cover-form-container">
+        <HomeTaslonicForm />
+      </div>
     </div>
-  </div>
-);
+  );
+};
